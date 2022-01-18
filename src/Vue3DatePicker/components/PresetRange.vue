@@ -16,7 +16,7 @@
     import { PropType } from 'Vue';
     import { startOfDay, isEqual } from 'date-fns';
 
-    const emit = defineEmits(['onSelect']);
+    const emit = defineEmits(['onSelect', 'selectDate']);
     const props = defineProps({
         presetRanges: { type: Array as PropType<object[]>, default: () => [] },
         selectedRanges: { type: Array as PropType<object[]>, default: () => [] },
@@ -24,6 +24,7 @@
 
     function applyRange(ranges) {
         emit('onSelect', ranges);
+        emit('selectDate');
     }
 
     const isRangeMatch = (array1, array2) => {

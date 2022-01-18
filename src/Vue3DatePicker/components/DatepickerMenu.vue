@@ -17,10 +17,11 @@
         <div :class="arrowClass" v-if="!inline"></div>
         <div :class="menuCalendarClassWrapper" ref="calendarWrapperRef" role="document">
             <PresetRange
-                :preset-ranges="presetRanges"
                 v-if="presetRanges.length && range"
-                @on-select="setDateRange"
+                :preset-ranges="presetRanges"
                 :selected-ranges="internalModelValue"
+                @on-select="setDateRange"
+                @select-date="$emit('selectDate')"
             ></PresetRange>
             <Calendar
                 v-for="instance in calendarAmm"
