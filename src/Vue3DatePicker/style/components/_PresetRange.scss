@@ -1,0 +1,19 @@
+.dp__ranges_wrapper {
+    padding: .7rem 0;
+    border-right: 1px solid #dddddd;
+    margin-right: .5rem;
+}
+
+.dp__ranges_item {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--dp-hover-color);
+    }
+}
+
+.dp__ranges_item-selected, .dp__ranges_item-selected:hover {
+    background: var(--dp-primary-color);
+    color: var(--dp-primary-text-color);
+}
